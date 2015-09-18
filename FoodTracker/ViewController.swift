@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //MARK: Props
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var mealNameText: UITextField!
-    
+    @IBOutlet weak var photoView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         mealNameLabel.text = textField.text
     }
     
+    //MARK: ImagePickerDelegate
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        photoView.image = selectedImage
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 
     //MARK: Actions
     
@@ -44,5 +57,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         mealNameLabel.text = "Default Label"
     }
     
+    @IBAction func selectImage(sender: UITapGestureRecognizer) {
+        mealNameText.resignFirstResponder()
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .PhotoLibrary
+        imagePicker.delegate = self
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+
+    }
 }
 

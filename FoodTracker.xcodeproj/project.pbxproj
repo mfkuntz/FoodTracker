@@ -13,6 +13,7 @@
 		9882A9F41BAB5C4E0000A55A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9882A9F31BAB5C4E0000A55A /* Assets.xcassets */; };
 		9882A9F71BAB5C4E0000A55A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9882A9F51BAB5C4E0000A55A /* LaunchScreen.storyboard */; };
 		9882AA021BAB5C4F0000A55A /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9882AA011BAB5C4F0000A55A /* FoodTrackerTests.swift */; };
+		9882AA0F1BABA10B0000A55A /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 9882AA0E1BABA10B0000A55A /* Images */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9882A9FD1BAB5C4F0000A55A /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9882AA011BAB5C4F0000A55A /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		9882AA031BAB5C4F0000A55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9882AA0E1BABA10B0000A55A /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		9882A9EB1BAB5C4E0000A55A /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				9882AA0E1BABA10B0000A55A /* Images */,
 				9882A9EC1BAB5C4E0000A55A /* AppDelegate.swift */,
 				9882A9EE1BAB5C4E0000A55A /* ViewController.swift */,
 				9882A9F01BAB5C4E0000A55A /* Main.storyboard */,
@@ -176,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9882AA0F1BABA10B0000A55A /* Images in Resources */,
 				9882A9F71BAB5C4E0000A55A /* LaunchScreen.storyboard in Resources */,
 				9882A9F41BAB5C4E0000A55A /* Assets.xcassets in Resources */,
 				9882A9F21BAB5C4E0000A55A /* Main.storyboard in Resources */,
