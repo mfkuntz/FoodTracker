@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var mealNameText: UITextField!
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +54,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
 
     //MARK: Actions
-    
-    @IBAction func setText(sender: UIButton) {
-        mealNameLabel.text = "Default Label"
-    }
     
     @IBAction func selectImage(sender: UITapGestureRecognizer) {
         mealNameText.resignFirstResponder()
