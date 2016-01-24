@@ -21,16 +21,21 @@ class FoodTrackerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+
+    //MARK: Meal Test
+    func testMealInit(){
+        //success cases
+        let potentialItem = Meal(name: "Newest Meal", photo: nil, rating: 5)
+        XCTAssertNotNil(potentialItem)
+        
+        
+        //failure cases
+        let noName = Meal(name: "", photo: nil, rating: 0)
+        XCTAssertNil(noName, "Empty Name is invalid")
+        
+        let badRating = Meal(name: "really gross", photo: nil, rating: -1)
+        XCTAssertNil(badRating, "Negative ratings are invalid")
+        
     }
     
 }
