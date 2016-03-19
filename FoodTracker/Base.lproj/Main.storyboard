@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xrg-bT-u1n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xrg-bT-u1n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQZ-jR-I3t">
                                             <rect key="frame" x="97" y="8" width="495" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6HP-eX-toO" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
@@ -41,6 +41,7 @@
                                     <outlet property="nameLabel" destination="LQZ-jR-I3t" id="IUe-WA-ddP"/>
                                     <outlet property="photoImageView" destination="Mv8-7s-85M" id="h0w-Qs-7Ru"/>
                                     <outlet property="ratingControl" destination="6HP-eX-toO" id="Jkg-h0-T8X"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showDetail" id="F0R-RE-DDO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -136,7 +137,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1366" y="540"/>
+            <point key="canvasLocation" x="1451" y="540"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QAb-10-pql">
@@ -172,10 +173,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4G-yK-EDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="540"/>
+            <point key="canvasLocation" x="755" y="222"/>
         </scene>
     </scenes>
     <resources>
         <image name="DefaultImage" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="F0R-RE-DDO"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -26,6 +26,13 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         //disable save until a valid name is entered
         checkValidMealName()
+        
+        if let meal = meal{
+            navigationItem.title = meal.name
+            mealNameText.text = meal.name
+            photoView.image = meal.photo
+            ratingControl.rating = meal.rating
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,7 +92,14 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        let isPresentInAddMode = presentingViewController is UINavigationController
+        
+        if (isPresentInAddMode) {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
     
 
